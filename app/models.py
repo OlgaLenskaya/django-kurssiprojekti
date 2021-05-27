@@ -14,9 +14,9 @@ class Supplier(models.Model):
 class Product(models.Model):
     productname=models.CharField(max_length=20, default = 'laku')
     packagesize=models.CharField(max_length=20, default = 3)
-    unitprice=models.IntegerField(default = 3)
     unitsinstock=models.IntegerField(default = 3)
     companyname=models.CharField(max_length=50, default = 'lakufirma')
+    unitprice=models.DecimalField(max_digits=9,decimal_places=2,default= 0.00)
     supplier = models.ForeignKey(Supplier, on_delete=models.CASCADE)
 
     class Meta:

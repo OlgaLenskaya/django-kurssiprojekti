@@ -20,7 +20,7 @@
         <p class="card-text" style="color: green;">Units in stock: {{p.unitsinstock}}</p>
         <a href="/edit-product-get/{{p.id}}/" class="btn btn-primary">Edit</a>
         <a href="/delete-product/{{p.id}}/" class="btn btn-danger">Delete</a>
-        <a href="#" class="btn btn-secondary">{{p.supplier.companyname}}´s all Products</a>
+        <a href="/products-by-supplier/{{p.supplier.id}}/" class="btn btn-secondary">{{p.supplier.companyname}}´s all Products</a>
     </div>
 </div>
 
@@ -71,4 +71,4 @@
 
 </script>
 
-{% endblock %
+{% endblock %}
